@@ -55,7 +55,7 @@ function show_status() {
 }
 
 function show_git_branch() {
-	local branch_or_commit=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || git rev-parse HEAD)
+	local branch_or_commit=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || git rev-parse HEAD 2>/dev/null)
 
 	if [ "$git_branch" == "" ]
 	then
